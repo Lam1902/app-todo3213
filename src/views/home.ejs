@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href='/crplayer'>Create Player</a>
+        <a href=""> Update Player</i></a>
+        <a href="#about">About</a>
+      </div>
+      <div>
+ 
+      </div>
+      <div class="table-player">
+      
+        <table style="font-size: 22px;">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Position</th>
+                  <th style="text-align: center;">Action</th>
+                  
+              </tr>
+          </thead>
+          <tbody>
+              
+             <% listplayer.forEach( (player) => {%>
+              <tr>
+                <td>
+                  <%= player.id %>
+                </td>
+                <td>
+                  <%= player.name %>
+                </td>
+                <td>
+                  <%= player.age %>
+                </td> 
+                <td>
+                  <%= player.position %>
+                </td>
+                <td style="text-align: center;">
+                  <div style="display: inline-block; margin-right: 10px;">
+                      <button style="border: none; background-color: rgb(233, 233, 18); padding: 5px 10px;">
+                          <a href='/update/<%= player.id %>' style="text-decoration: none; color: black; font-size: 14px;">Edit</a>
+                      </button>
+                  </div>
+                  <div style="display: inline-block;">
+                      <form action="/delete_player/<%= player.id %>" method="post">
+                          <button style="border: none; background-color: rgb(215, 18, 18); padding: 5px 10px; cursor: pointer;">
+                              <span style="color: white; font-size: 14px;">Delete</span>
+                          </button>
+                      </form>
+                  </div>
+              </td>
+              
+              
+              
+                
+            </tr>
+              <% }) %>
+          </tbody>
+      </table>
+      
+      </div>
+      
+</body>
+</html>

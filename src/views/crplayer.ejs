@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create player</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href='/'>Home</a>
+        <a href='/crplayer'  class="active">Create Player</a>
+        <a href="/updatePage">Update Player</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="container">
+        <h2>Add Player</h2>
+        <form action="/add_player" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+          </div>
+          <div class="form-group">
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" required>
+          </div>
+          <button type="submit">Add Player</button>
+        </form>
+      </div>
+</body>
+</html>

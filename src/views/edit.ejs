@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update player</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href='/'>Home</a>
+        <a href='/crplayer'  >Create Player</a>
+        <a href="/updatePage" class="active">Update Player</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="container">
+        <h2>Update Player</h2>
+        <form action="/update_player" method="post">
+            <div class="form-group" style="display: none;">
+                <label for="id">id:</label>
+                <input 
+                type="text" 
+                id="id" 
+                name="playerid" 
+                value="<%= playerEdit.id %>"
+                required>
+              </div>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            value="<%= playerEdit.name %>"
+            required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input 
+            type="number" 
+            id="age" 
+            name="age" 
+            value="<%= playerEdit.age %>"
+            required>
+          </div>
+          <div class="form-group">
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position"    value="<%= playerEdit.position%>" required>
+          </div>
+          <button type="submit">Update Player</button>
+        </form>
+      </div>
+</body>
+</html>
